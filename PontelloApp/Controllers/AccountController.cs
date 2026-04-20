@@ -75,8 +75,12 @@ namespace PontelloApp.Controllers
             return View(model);
         }
 
-        public IActionResult Register() => View();
-
+      public IActionResult Register()
+        {
+            var model = new RegisterVM();
+            return View(model);
+        }
+        
         [HttpPost]
         public async Task<IActionResult> Register(RegisterVM model)
         {
